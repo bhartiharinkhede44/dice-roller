@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dicerooler</title>
+  <style>
+    .img-ice {
+      height: 300px;
+      width: 300px;
+      border-radius: 3px;
+      background-color: wheat;
+      /* display: flex;
+      justify-content: center; */
+    }
+
+    .img {
+      padding-left: 100px;
+      padding-top: 50px;
+    }
+
+    .btn {
+      padding-left: 15px;
+      padding-right:15px;
+      margin-left: 100px;
+      background-color: black;
+      color: bisque;
+      border-radius: 6px;
+    }
+     
+  </style>
+</head>
+
+<body>
+  <div class="img-ice">
+    <img src="./img/ice4.png" id="dice" height="100px" class="img" /><br><br>
+    <button type="button" onclick="rooldice()" class="btn"> Roll The Dice</button>
+
+  </div>
+  <script>
+    const DiceImg = document.getElementById("dice");
+    function rooldice() {
+      const min = 1;
+      const max = 7;
+      const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+      console.log(randomNumber)
+        switch (randomNumber) {
+        case 1:
+          DiceImg.src = "./img/ice1.png";
+          break;
+          case 2:
+          DiceImg.src = "./img/ice2.png";
+          break;
+          case 3:
+          DiceImg.src = "./img/ice3.png";
+          break;
+          case 4:
+          DiceImg.src = "./img/dice.png";
+          break;
+          case 5:
+          DiceImg.src = "./img/ice5.png";
+          break;
+          case 6:
+          DiceImg.src = "./img/ice6.png";
+          break;
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>
